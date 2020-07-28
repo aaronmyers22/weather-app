@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Location } from './Location';
 
 export class App extends React.Component {
   render() {
@@ -8,6 +9,7 @@ export class App extends React.Component {
       This is a sample stateful and server-side rendered React application.
       <br />
       <br />
+      <Location />
     </div>
     )
   }

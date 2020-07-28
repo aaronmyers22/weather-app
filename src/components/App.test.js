@@ -6,7 +6,7 @@ import { App } from './App';
 import { render, fireEvent, screen } from '@testing-library/react';
 
 describe('App', () => {
-  it('renders ansd increments counter', () => {
+  it('renders', () => {
     const { getByText, getByTitle, asFragment } = render(
       <App initialData={{ appName: 'TEST' }} />,
     );
@@ -15,11 +15,5 @@ describe('App', () => {
         TEST
       </h1>
     `);
-
-    const button = screen.getByTitle('increment');
-    fireEvent.click(button);
-    expect(getByTitle('increment')).toHaveTextContent('1');
-
-    expect(asFragment()).toMatchSnapshot();
   });
 });
